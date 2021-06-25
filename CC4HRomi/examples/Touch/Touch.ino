@@ -1,25 +1,25 @@
 #include <CC4HRomi.h>
 
+// Create TouchSensor using pin 20.
+// Sensor wires should be connected to GROUND and 20
 TouchSensor touch(20);
+
+// use RomiBoard too so we can turn on light
+RomiBoard board;
 
 void setup() {
   // put your setup code here, to run once:
-
-  // turn on serial monitor so we can print values
-  Serial.begin(9600);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-
   
   // read the touch sensor
   bool isTouched = touch.isTouched();
 
-  // print status to serial monitor
+  // turn red LED on if button is pressed.
   if (isTouched)
-    Serial.println("Touch sensor triggered");
-
-  // wait a second until next loop
-  delay(1000);
+    board.setRedLed(true);
+  else
+    board.setRedLed(false);
 }

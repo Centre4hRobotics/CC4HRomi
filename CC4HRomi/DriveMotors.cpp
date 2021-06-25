@@ -38,9 +38,9 @@ void DriveMotors::drive(double speed, double steer) {
   leftMotorOutput = constrain(leftMotorOutput, -1.0, 1.0);
   rightMotorOutput = constrain(rightMotorOutput, -1.0, 1.0);
   
-  tankDrive(leftMotorOutput, rightMotorOutput);
+  _motors.setSpeeds(300*leftMotorOutput, 300*rightMotorOutput);
 }
 
-void DriveMotors::tankDrive(double leftSpeed, double rightSpeed) {
-    _motors.setSpeeds(300*leftSpeed, 300*rightSpeed);
+void DriveMotors::stop() {
+    _motors.setSpeeds(0, 0);
 }

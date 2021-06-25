@@ -23,14 +23,9 @@ public:
     void drive(double speed, double steer);
 
     /**
-     * Tank Drive method, where the speeds of the left and right wheel are
-     * specified directly.
-     * 
-     * @param leftSpeed: The speed of the left wheel [-1.0..1.0]. Forward is positive.
-     * @param rightSpeed: The speed of the right wheel [-1.0..1.0]. Forward is positive.
+     * Stop the motors (same as drive(0, 0))
      */
-    void tankDrive(double leftSpeed, double rightSpeed);
-
+    void stop();
 private:
     Romi32U4Motors _motors;
 };

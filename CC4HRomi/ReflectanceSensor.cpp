@@ -1,16 +1,16 @@
-#include "IRSensor.h"
+#include "ReflectanceSensor.h"
 #include <Arduino.h>
 
-IRSensor::IRSensor(int pin) {
+ReflectanceSensor::ReflectanceSensor(int pin) {
     _pin = pin;
 
     pinMode(_pin, INPUT);
 }
 
-bool IRSensor::isLight() {
+bool ReflectanceSensor::isLight() {
     return (digitalRead(_pin) == LOW);
 }
 
-bool IRSensor::isDark() {
+bool ReflectanceSensor::isDark() {
     return (digitalRead(_pin) == HIGH);
 }

@@ -5,6 +5,6 @@
 #include "Gyro.h"
 #include "TouchSensor.h"
 #include "UltrasonicSensor.h"
-#include "IRSensor.h"
+#include "ReflectanceSensor.h"
 #include "ServoMotor.h"
 #include "RomiBoard.h"
