@@ -14,6 +14,14 @@ public:
     RomiBoard();
 
     /**
+     * Wait for any of the 3 buttons to be pressed and return a number
+     * corresponding to the one that is.
+     * 
+     * @return A number corresponding to the pressed button (A=1, B=2, C=3)
+     */
+    int waitForButtonPress();
+
+    /**
      * Check if Button A is currently pressed.
      * @return true if the button is currently pressed.
      */

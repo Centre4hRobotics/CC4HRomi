@@ -3,6 +3,19 @@
 
 RomiBoard::RomiBoard() {}
 
+int RomiBoard::waitForButtonPress() {
+    while(true) {
+        if (isButtonAPressed())
+            return 1;
+        if (isButtonBPressed())
+            return 2;
+        if (isButtonCPressed())
+            return 3;
+        delay(100);
+    }
+    return 0; // should never hit this
+}
+
 bool RomiBoard::isButtonAPressed() {
     return _buttonA.isPressed();
 }
