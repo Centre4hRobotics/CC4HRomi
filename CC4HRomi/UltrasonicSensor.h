@@ -1,6 +1,5 @@
 #pragma once
 
-#include <LSM6.h>
 #include <Ultrasonic.h>
 
 /**
