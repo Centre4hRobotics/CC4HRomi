@@ -1,5 +1,6 @@
 #pragma once
 
+#include <LSM6.h>
 #include <Ultrasonic.h>
 
 /**
@@ -37,4 +38,6 @@ public:
 private:
     Ultrasonic _ultrasonic;
     double _maxDistance;
+    unsigned long _lastReadTime;
+    double _lastReadDistance;
 };
